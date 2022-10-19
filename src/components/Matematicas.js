@@ -1,6 +1,6 @@
 import {useState} from "react";
-function Matematicas({ num, metodoTriple }) {
-
+function Matematicas(props) {
+    const { num, metodoTriple } = props;
     const [numero, setNumero] = useState(parseInt(7));
 
     const doble = () => {
@@ -13,8 +13,8 @@ function Matematicas({ num, metodoTriple }) {
         <div>
             <h1>Doble : {numero} </h1>
             <button onClick={() => doble()}>Hijo</button>
-            
-            <button onClick={() => metodoTriple("soy triple" + num * 3)}>Padre</button>
+            <h1>Trimple : {num} </h1>
+            <button onClick={() => metodoTriple(num)}>Padre</button>
 
         </div>
     )
